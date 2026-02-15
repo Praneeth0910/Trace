@@ -1,0 +1,118 @@
+# TRACE MVP - Python Backend Requirements
+# AWS AI for Bharat Hackathon - Railway Safety System
+# Python 3.11+
+
+# ============================================================================
+# Core Web Framework
+# ============================================================================
+fastapi==0.104.1              # Modern async web framework with automatic API docs
+uvicorn[standard]==0.24.0     # ASGI server with WebSocket support
+python-multipart==0.0.6       # Form data parsing for FastAPI
+
+# ============================================================================
+# Data Validation & Models
+# ============================================================================
+pydantic==2.5.0               # Data validation and settings management
+pydantic-settings==2.1.0      # Settings management with Pydantic
+
+# ============================================================================
+# WebSocket Support
+# ============================================================================
+websockets==12.0              # WebSocket protocol implementation
+python-socketio==5.10.0       # Socket.IO support (optional, if needed)
+
+# ============================================================================
+# Data Processing & Calculations
+# ============================================================================
+numpy==1.26.2                 # Numerical computing for distance/speed calculations
+scipy==1.11.4                 # Scientific computing (optional, for advanced math)
+
+# ============================================================================
+# Database (Lightweight for MVP)
+# ============================================================================
+# Using SQLite (built-in to Python, no package needed)
+# Optional: Add SQLAlchemy if you want ORM
+# sqlalchemy==2.0.23          # SQL toolkit and ORM (uncomment if needed)
+
+# ============================================================================
+# HTTP Client (for external APIs if needed)
+# ============================================================================
+httpx==0.25.2                 # Async HTTP client
+requests==2.31.0              # Sync HTTP client (backup)
+
+# ============================================================================
+# Date/Time Handling
+# ============================================================================
+python-dateutil==2.8.2        # Extensions to datetime module
+
+# ============================================================================
+# CORS Support
+# ============================================================================
+# Included in FastAPI, no separate package needed
+
+# ============================================================================
+# Environment Variables & Configuration
+# ============================================================================
+python-dotenv==1.0.0          # Load environment variables from .env file
+
+# ============================================================================
+# Logging & Monitoring
+# ============================================================================
+loguru==0.7.2                 # Better logging with colors and formatting
+
+# ============================================================================
+# Data Serialization
+# ============================================================================
+orjson==3.9.10                # Fast JSON serialization (optional performance boost)
+
+# ============================================================================
+# Geospatial Calculations
+# ============================================================================
+geopy==2.4.1                  # Geocoding and distance calculations
+haversine==2.8.1              # Calculate distances between lat/lon coordinates
+
+# ============================================================================
+# Testing (Optional for MVP, but recommended)
+# ============================================================================
+pytest==7.4.3                 # Testing framework
+pytest-asyncio==0.21.1        # Async test support
+httpx==0.25.2                 # Already listed above, used for testing FastAPI
+
+# ============================================================================
+# Code Quality (Optional for MVP)
+# ============================================================================
+# black==23.12.1              # Code formatter (uncomment if needed)
+# ruff==0.1.8                 # Fast linter (uncomment if needed)
+
+# ============================================================================
+# Development Tools
+# ============================================================================
+# watchfiles==0.21.0          # File watching for auto-reload (included in uvicorn[standard])
+
+# ============================================================================
+# Optional: Simple ML/AI (if you want basic predictions)
+# ============================================================================
+scikit-learn==1.3.2           # Simple ML algorithms (optional)
+# xgboost==2.0.3              # Advanced ML (skip for MVP, too heavy)
+
+# ============================================================================
+# Optional: Data Visualization (for debugging/analysis)
+# ============================================================================
+# matplotlib==3.8.2           # Plotting library (uncomment if needed)
+# pandas==2.1.4               # Data analysis (uncomment if needed)
+
+# ============================================================================
+# Security (Optional but recommended)
+# ============================================================================
+# python-jose[cryptography]==3.3.0  # JWT tokens (uncomment if adding auth)
+# passlib[bcrypt]==1.7.4            # Password hashing (uncomment if adding auth)
+
+# ============================================================================
+# Notes:
+# ============================================================================
+# - This is a minimal set for MVP development
+# - Uncomment optional packages as needed
+# - For production, pin all transitive dependencies
+# - Use `pip install -r requirements.txt` to install
+# - Consider using virtual environment: `python -m venv venv`
+# - Activate venv: Windows: `venv\Scripts\activate`, Unix: `source venv/bin/activate`
